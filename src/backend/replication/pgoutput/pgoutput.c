@@ -1549,16 +1549,6 @@ cleanup:
 		ancestor = NULL;
 	}
 
-	/* Drop the new slots that were used to store the converted tuples. */
-	if (relentry->attrmap)
-	{
-		if (old_slot)
-			ExecDropSingleTupleTableSlot(old_slot);
-
-		if (new_slot)
-			ExecDropSingleTupleTableSlot(new_slot);
-	}
-
 	MemoryContextSwitchTo(old);
 	MemoryContextReset(data->context);
 }
