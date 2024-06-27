@@ -1,0 +1,1 @@
+/home/azuredb/pg/pg2/postgres/inst/bin/postgres "-D" "test2"
